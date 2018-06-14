@@ -1,0 +1,11 @@
+<h1>Welcome to facts about Mimi</h1>
+
+    <% @facts.each do |fact| %>
+      <h3><%= fact[:title] %></h3>
+      <a href="/<%= fact[:id] %>">See More</a>
+      <a href="/<%= fact[:id] %>/edit">Edit</a>
+      <form action="/<%= fact[:id] %>" method="fact">
+        <input type="submit" value="DELETE">
+        <input type="hidden" name="_method" value="DELETE">
+      </form>
+    <% end %>
